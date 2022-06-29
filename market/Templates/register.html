@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+
+    <!--create form-->
+    <div class="container" >
+
+            <!-- center the above h1  -->
+            <div class="text-center" >
+            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+        <br>
+        <form>
+
+        
+        {{ form.username.label() }}
+        {{ form.username(class="form-control",placeholder="UserName") }}
+        
+        {{ form.password.label() }}
+        {{ form.password(class="form-control",placeholder="Password") }}
+        {{ form.confirm_password.label() }}
+        
+        {{ form.confirm_password(class="form-control",placeholder="Password") }}
+        {{ form.email.label() }}
+        
+        {{ form.email(class="form-control",placeholder="Email") }}
+            <br>
+        {{ form.submit(class="btn btn-primary") }}
+    
+</form>
+
+
+</div>
+
+</body>
+{% endblock %}
