@@ -13,12 +13,13 @@
             <div class="text-center" >
             <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
         <br>
-        <form>
+        <form method="POST">
+            {{form.hidden_tag()}}
 
         
         {{ form.username.label() }}
         {{ form.username(class="form-control",placeholder="UserName") }}
-        
+    
         {{ form.password.label() }}
         {{ form.password(class="form-control",placeholder="Password") }}
         {{ form.confirm_password.label() }}
@@ -28,6 +29,13 @@
         
         {{ form.email(class="form-control",placeholder="Email") }}
             <br>
+            <div>
+                <h6>Already have an account?</h6>
+                <a href="{{ url_for('login_page') }}" class="btn btn-secondary">Login</a>
+            </div>
+
+            <br>
+
         {{ form.submit(class="btn btn-primary") }}
     
 </form>
